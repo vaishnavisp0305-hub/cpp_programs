@@ -38,7 +38,7 @@ public:
 };
 
 int main() {
-    Time t1(5, 65), t2(3, 60);
+    Time t1(5, 55), t2(3, 35);
 
     Time sum = t1.add(t2);
     Time diff = t1.subtract(t2);
