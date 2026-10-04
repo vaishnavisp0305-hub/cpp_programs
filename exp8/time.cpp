@@ -14,14 +14,14 @@ this->hours = h;
 this->minutes = m;
 }
 // Overloading (+) operator to perform addition of two distance object Call by reference
-Time operator/(Time& t2)
+Time operator+(Time& t2)
 {
 // Create an object to return
-Time t;
-t.hours = this->hours / t2.hours;
-t.minutes = this->minutes / t2.minutes;
+Time t3;
+t3.hours = this->hours + t2.hours;
+t3.minutes = this->minutes + t2.minutes;
 // Return the resulting object
-return t;
+return t3;
 }
 };
 // Driver Code
@@ -29,10 +29,10 @@ int main()
 {
 Time t1(10, 6);
 Time t2(10, 12);
-Time t;
+Time t3;
 // Use overloaded operator
-t = t1 / t2;
+t3 = t1 + t2;
 cout << "\nTotal Hours & Minutes: " <<
-t.hours << "'" << t.minutes;
+t3.hours << "'" << t3.minutes;
 return 0;
 }
